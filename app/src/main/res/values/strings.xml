@@ -4,4 +4,5 @@
     <string name="enter_text">Enter text...</string>
     <dimen name="button_margin">50dp</dimen>
     <string name="sfproreg">SF-Pro-Text-Regular.otf</string>
+    <string name="soinsansroman">Stawix - SoinSansNeue-Roman.otf</string>
 </resources>

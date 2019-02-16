@@ -10,15 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_centerInParent="true"
-        android:text="TTS"
+        android:text="Text-to-speech"
         android:textSize="20dp"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_centerInParent="true"
-        android:text="T"
-        android:textSize="20dp"
-        />
+
 
 </RelativeLayout>

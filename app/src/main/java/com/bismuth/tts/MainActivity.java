@@ -1,9 +1,9 @@
 package com.bismuth.tts;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
@@ -27,6 +27,7 @@ private Button scan;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         speak = (Button) findViewById(R.id.dictate);
         speak.setOnClickListener(new View.OnClickListener() {

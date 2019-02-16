@@ -105,6 +105,21 @@ public class scantext extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        if(mTTs!=null)
+        {
+            mTTs.stop();
+            mTTs.shutdown();
+        }
+
+        super.onDestroy();
+
+        Intent i = new Intent (this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
@@ -145,15 +160,9 @@ public class scantext extends AppCompatActivity {
                     if (textBlocks.size() == 0) {
                         scanResults.setText("Scan Failed: Found nothing to scan");
                     } else {
-                        scanResults.setText(scanResults.getText() + "Blocks: " + "\n");
-                        scanResults.setText(scanResults.getText() + blocks + "\n");
-                        scanResults.setText(scanResults.getText() + "---------" + "\n");
-                        scanResults.setText(scanResults.getText() + "Lines: " + "\n");
+
                         scanResults.setText(scanResults.getText() + lines + "\n");
-                        scanResults.setText(scanResults.getText() + "---------" + "\n");
-                        scanResults.setText(scanResults.getText() + "Words: " + "\n");
-                        scanResults.setText(scanResults.getText() + words + "\n");
-                        scanResults.setText(scanResults.getText() + "---------" + "\n");
+
                     }
                 } else {
                     scanResults.setText("Could not set up the detector!");
